@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <algorithm>
 #include <vector>
+
+#include "print_tuple.h"
 using namespace std;
 
 //parameter pack
@@ -34,8 +36,9 @@ int main()
 	tuple<int, string> t1{ 42,"C++" };
 	tuple<int, string> t2( 42,"C++" );
 	tuple<int, string> t3 = { 42,"C++" };
-
+	
 	tuple<int, string> t4 = make_tuple( 42,"C++" );
+	//tuple<> t6;
 
 	auto t5 = make_tuple(42, "C++");
 
@@ -91,16 +94,18 @@ int main()
 	});
 	
 	//variant 2
-	 sort(mans.begin(), mans.end(), [](const Man& l, const Man& r) {
-		return tie(l.jobs, l.langs, l.age) > tie(r.jobs, r.langs, r.age);
-	});
+	// sort(mans.begin(), mans.end(), [](const Man& l, const Man& r) {
+	//	return tie(l.jobs, l.langs, l.age) > tie(r.jobs, r.langs, r.age);
+	//});
 
-	for_each(mans.begin(), mans.end(), [](const Man& man) {
-		cout << "Jobs: " << man.jobs << " Langs: " << man.langs << " Age: " << man.age << endl;
-	});
+	//for_each(mans.begin(), mans.end(), [](const Man& man) {
+	//	cout << "Jobs: " << man.jobs << " Langs: " << man.langs << " Age: " << man.age << endl;
+	//});
 
-	
-	
+	auto super_tuple = tuple_cat(make_tuple(1, 2, 3), make_tuple(4, 5, 6));
+
+	cout << super_tuple << endl;
+
 
 	return 0;
 }
