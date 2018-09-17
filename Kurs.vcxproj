@@ -146,10 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="variadic_templates.cpp" />
+    <ClInclude Include="print_tuple.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="print_tuple.h" />
+    <ClCompile Include="smart_prt.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
