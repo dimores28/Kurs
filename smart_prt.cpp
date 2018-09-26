@@ -4,6 +4,11 @@
 
 using namespace std;
 
+//std::auto_ptr
+//std::shared_ptr
+//std::unique_ptr
+//std::weak_ptr
+
 struct Point
 {
 	int x;
@@ -147,7 +152,10 @@ int main()
 	weak_ptr<Point>w(sp10);
 	
 	cout << *w.lock() << endl;
+	cout << w.expired() << endl; //Возвращает удален(1) или нет(0) 
 
+
+	
 
 
 	return 0;

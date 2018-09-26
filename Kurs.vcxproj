@@ -149,7 +149,7 @@
     <ClInclude Include="print_tuple.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="smart_prt.cpp" />
+    <ClCompile Include="moving.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
