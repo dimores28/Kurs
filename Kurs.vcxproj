@@ -149,7 +149,7 @@
     <ClInclude Include="print_tuple.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="iterator.cpp" />
+    <ClCompile Include="char_traits.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
